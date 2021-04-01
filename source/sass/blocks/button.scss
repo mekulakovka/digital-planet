@@ -1,0 +1,23 @@
+.button {
+  background-color: transparent;
+  border: 2px solid $mint-color;
+  border-radius: 2px;
+  padding: 7px 15px;
+  box-sizing: border-box;
+
+  color: $white-color;
+  font-size: 14px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: none;
+
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    border-color: $mint-color-hover;
+    background-color: $mint-color-hover;
+    color: $white-color;
+  }
+}

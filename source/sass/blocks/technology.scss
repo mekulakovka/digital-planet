@@ -1,0 +1,112 @@
+.technology__header {
+  display: inline-block;
+
+  margin: 0 0 58px 26px;
+  padding-right: 40px;
+  padding-bottom: 6px;
+  border-bottom: 3px solid $mint-color;
+
+  font-size: 44px;
+  line-height: 51px;
+  font-weight: 500;
+}
+
+.technology-slider {
+  position: relative;
+  min-width:1200px; //чтоб не съезжали блоки слайдера
+}
+
+.technology-slider__picture-container {
+  position: absolute;
+  top: -30px;
+  left: 50%;
+
+  width: 480px;
+  height: 480px;
+  margin-left: -240px;
+  box-sizing: border-box;
+  padding: 36px;
+  background-image:url(../img/technology-slider-ellipse.svg);
+  background-position: center center;
+  background-size: contain;
+}
+
+.technology-slider__picture {
+  width: 408px;
+  height: 408px;
+  margin: 0;
+
+  background-color: $white-color;
+  border-radius: 50%;
+}
+
+.technology-slider__image {
+  position: absolute;
+  top: 141px;
+  left: 47px;
+}
+
+.technology-slider__button-enlarge {
+  position: absolute;
+  right: 50px;
+  bottom: 56px;
+
+  width: 85px;
+  height: 85px;
+  margin: 0;
+  padding: 25px 27px;
+
+  background-color: $mint-color;
+  border: none;
+  border-radius:50%;
+  box-sizing:border-box;
+  cursor: pointer;
+
+  transition: background-color 0.3s ease;
+
+  z-index: 1;
+
+  &:hover {
+    background-color: $mint-color-hover;
+  }
+}
+
+.technology-slider__list {
+  margin-left: 56px;
+}
+
+.technology-slider__item {
+  display: block;
+
+  width: 290px;
+  padding-right: 20%;
+  margin-bottom: 83px;
+  float: left;
+
+
+  &:nth-child(2n) {
+    float: right;
+    padding-right:4%;
+    padding-left: 20%;
+  }
+}
+
+.technology-slider__item-title {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 21px;
+  line-height: 28px;
+  font-weight: 700;
+}
+
+.technology-slider__item-text {
+  margin-top: 0;
+  margin-bottom: 15px;
+  font-size: 15px;
+  line-height: 19.5px;
+  font-weight: 300;
+}
+
+.technology-slider__controls {
+  display: none;
+}

@@ -1,0 +1,69 @@
+.intro__container {
+  padding-left: 71px;
+}
+
+.intro__title {
+  font-size: 96px;
+  font-weight: normal;
+  line-height: 110px;
+  margin: 0 0 24px;
+}
+
+.intro__text {
+  font-weight: 300;
+  margin-top: 0;
+  margin-bottom: 71px;
+}
+
+.intro__button-container {
+  margin-bottom: 40px;
+}
+
+.intro__button {
+  display: inline-block;
+  padding: 18px 18px 20px 80px;
+  font-size: 21px;
+  text-align: left;
+}
+
+.intro__button-order {
+  position: relative;
+  min-width: 238px;
+  width: auto;
+  margin-right: 20px;
+  background-color: $mint-color;
+  border-color: $mint-color;
+  transition: border-color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+.intro__button-order:hover {
+  border-color: $mint-color-hover;
+}
+
+.intro__button-order::before,
+.intro__button-video::before {
+  content: "";
+  position: absolute;
+  background-image: url("../img/icon-ticket.svg");
+  background-repeat: no-repeat;
+  background-size: 31px 31px;
+  background-position: 0 0;
+  width: 31px;
+  height: 31px;
+  top: 16px;
+  left: 37px;
+}
+
+.intro__button-video {
+  position: relative;
+  min-width: 201px;
+  width: auto;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border-width: 3px;
+  text-decoration: none;
+}
+
+.intro__button-video::before {
+  background-image: url("../img/icon-video.svg");
+}

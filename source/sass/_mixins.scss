@@ -18,3 +18,16 @@
     display: none;
   }
 }
+
+@mixin site-fullwidth() {
+  width: 100%;
+  max-width:1278px;
+  min-width: 1000px;//временно, потом заменить на медиазапросы
+  margin: 0 auto;
+  padding: 0 15px;
+  box-sizing: border-box;
+}
+
+@mixin hover-transition() {
+  transition: background-color 0.3s ease;
+}

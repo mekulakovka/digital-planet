@@ -1,0 +1,99 @@
+.slider {
+  display: flex;
+  flex-direction: column;
+}
+
+.slider__list {
+  margin: 0;
+  padding: 0;
+}
+
+.slider__item {
+  display: none;
+
+  list-style: none;
+}
+
+.slider__item-current {
+  display: block;
+}
+
+.slider__controls {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+.slider__pagination {
+  padding: 13px 21px;
+
+  font-size: 18px;
+  line-height: 1.4;
+  font-weight: 400;
+  cursor: default;
+}
+
+.slider__pagination-current {
+  opacity: 0.84;
+}
+
+.slider__pagination-total {
+  opacity: 0.5;
+}
+
+.slider__buttons {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.slider__button {
+  position: relative;
+  display: block;
+
+  width: 60px;
+  height: 48px;
+
+  background-color: $dark-grey-color;
+  border: none;
+  cursor: pointer;
+
+  &::before {
+    content: "";
+
+    position: absolute;
+    top: 17px;
+    left: 50%;
+
+    width: 11px;
+    height: 11px;
+    border-right: 1px solid $white-color;
+    border-bottom: 1px solid $white-color;
+
+    transition: border-color 0.3s ease;
+  }
+
+  &:hover {
+    &::before {
+      border-color: #0dd1a2;
+    }
+  }
+
+  &:focus {
+    border: 1px solid #0dd1a2;
+  }
+}
+
+.slider__button--prev::before {
+  transform: translateX(-50%) rotate(135deg);
+  left: 57%;
+}
+
+.slider__button--next::before {
+  transform: translateX(-50%) rotate(-45deg);
+}
+
+.slider__button--disabled {
+  opacity: .35;
+  cursor: auto;
+  pointer-events: none;
+}
