@@ -122,7 +122,7 @@ textarea {
 @media (-webkit-min-device-pixel-ratio: 1.5),
 (min-resolution: $retina-dpi),
 (min-resolution: $retina-dppx) {
-  .main-background::after {
+  .intro {
     background-image: url("../img/kid_VR@2x.png"), url("../img/body-background-main@2x.jpg");
   }
 }

@@ -99,7 +99,7 @@ textarea {
   background-position: bottom right, top center; }
 
 @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
-  .main-background::after {
+  .intro {
     background-image: url("../img/kid_VR@2x.png"), url("../img/body-background-main@2x.jpg"); } }
 
 body {
@@ -781,8 +781,11 @@ body {
 .questions {
   background-image: url(../img/boy.png);
   background-position: bottom right;
-  background-repeat: no-repeat;
-  height: 100vh; }
+  background-repeat: no-repeat; }
+
+@media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+  .questions {
+    background-image: url(../img/boy@2x.png); } }
 
 .questions__header {
   display: inline-block;
