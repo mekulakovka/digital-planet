@@ -18,12 +18,11 @@
 }
 
 .scroll__social-item {
-  margin-right: 12px;
-
   list-style: none;
 }
 
 .scroll__social-link {
+  padding: 5px 6px;
   opacity: 0.64;
 
   transition: opacity 0.3s ease;
@@ -64,7 +63,7 @@
     content: "";
 
     position: absolute;
-    bottom: 3px;
+    bottom: -2px;
     left: 50%;
     width: 10px;
     height: 9px;

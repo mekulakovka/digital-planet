@@ -1,7 +1,7 @@
 .technology__header {
   display: inline-block;
 
-  margin: 0 0 58px 26px;
+  margin: 0 0 73px 26px;
   padding-right: 40px;
   padding-bottom: 6px;
   border-bottom: 3px solid $mint-color;
@@ -18,12 +18,12 @@
 
 .technology-slider__picture-container {
   position: absolute;
-  top: -30px;
-  left: 50%;
+  top: -48px;
+  left: 343px;
 
   width: 480px;
   height: 480px;
-  margin-left: -240px;
+
   box-sizing: border-box;
   padding: 36px;
   background-image:url(../img/technology-slider-ellipse.svg);
@@ -72,22 +72,90 @@
 }
 
 .technology-slider__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+
+  width: 1195px;
   margin-left: 56px;
 }
 
 .technology-slider__item {
   display: block;
+  position: relative;
 
-  width: 290px;
-  padding-right: 20%;
-  margin-bottom: 83px;
-  float: left;
+  box-sizing:border-box;
 
+  &::after {
+    content:"";
 
-  &:nth-child(2n) {
-    float: right;
-    padding-right:4%;
-    padding-left: 20%;
+    position: absolute;
+  }
+
+  &--1 {
+    width: 392px;
+    padding-right: 112px;
+    margin-right: 185px;
+
+    &::after {
+      top: 13px;
+      left: 211px;
+
+      width: 181px;
+      height: 115px;
+      background-image: url(../img/pointer-1.svg);
+    }
+  }
+
+  &--2 {
+    width: 537px;
+    padding-left: 257px;
+
+    &::after {
+      top: 13px;
+      left: 0;
+
+      width: 245px;
+      height: 98px;
+      background-image: url(../img/pointer-2.svg);
+    }
+  }
+
+  &--3 {
+    position: relative;
+    top: -30px;
+
+    width: 573px;
+    padding-right: 294px;
+    padding-top: 66px;
+    margin-right: 123px;
+
+    &::after {
+      top: 0;
+      right: 0;
+
+      width: 409px;
+      height: 82px;
+      background-image: url(../img/pointer-3.svg);
+    }
+  }
+
+  &--4 {
+    position: relative;
+    top: -30px;
+
+    width: 415px;
+    padding-left: 135px;
+    padding-top: 75px;
+
+    &::after {
+      top: 0;
+      left: 0;
+
+      width: 123px;
+      height: 90px;
+      background-image: url(../img/pointer-4.svg);
+    }
   }
 }
 

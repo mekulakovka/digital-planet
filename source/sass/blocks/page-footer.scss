@@ -1,5 +1,5 @@
 .page-footer {
-  margin-top: 30px;
+  //margin-top: 30px;
   padding-bottom: 30px;
 }
 
@@ -13,6 +13,7 @@
 
 .page-footer__text {
   margin: 0;
+  opacity: 0.64;
 }
 
 .page-footer__social {
@@ -24,13 +25,21 @@
 }
 
 .page-footer__social-item {
-  list-style-type: none;
+  list-style: none;
 }
 
 .page-footer__social-link {
+  padding: 5px 6px;
+  opacity: 0.64;
+
+  transition: opacity 0.3s ease;
 
   svg {
     fill:$white-color;
-    opacity: 0.64;
   }
+
+  &:hover {
+    opacity: 1;
+  }
+
 }

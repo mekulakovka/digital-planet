@@ -57,26 +57,6 @@ body {
   }
 }
 
-.main-background {
-  //flex-shrink: 0;
-  //min-height: 100%;
-
-  //height: 100vh;
-
-  background-image: url("../img/body-background-main@1x.jpg");
-  background-repeat: no-repeat, no-repeat;
-  background-size: contain;
-  background-position: top, center;
-}
-
-@media (-webkit-min-device-pixel-ratio: 1.5),
-(min-resolution: $retina-dpi),
-(min-resolution: $retina-dppx) {
-  .main-background::after {
-    background-image: url("../img/body-background-main@2x.jpg");
-  }
-}
-
 a {
   color: $white-color;
   &:hover {
@@ -111,10 +91,6 @@ img {
   overflow: hidden;
 }
 
-.site-wrapper {
-  @include site-fullwidth();
-}
-
 input[type="text"],
 input[type="email"],
 textarea {
@@ -129,28 +105,79 @@ textarea {
   opacity: 0.8;
 }
 
+.site-wrapper {
+  @include site-fullwidth();
+}
+
+.intro {
+  //flex-shrink: 0;
+  //min-height: 100%;
+
+  background-image: url("../img/kid_VR@1x.png"), url("../img/body-background-main@1x.jpg");
+  background-repeat: no-repeat, no-repeat;
+  background-size: auto, cover;
+  background-position: bottom right, top center; //временно у пацана отступ сверху, пока не порешаем с экраном
+}
+
+@media (-webkit-min-device-pixel-ratio: 1.5),
+(min-resolution: $retina-dpi),
+(min-resolution: $retina-dppx) {
+  .main-background::after {
+    background-image: url("../img/kid_VR@2x.png"), url("../img/body-background-main@2x.jpg");
+  }
+}
 
 //временные стили для скринов
+
+body {
+  position: relative; //для футера
+}
 
 .page-header {
   position: fixed;
   top: 0;
   width: 100%;
   height: 74px;
+
+  //background: linear-gradient(#000, #000, transparent);
+
+  z-index: 999;
 }
 
-.intro {
-  padding-top: 270px;
-}
-
+.intro,
 .about,
 .howitworks,
 .technology,
 .questions,
 .contacts {
+  position: relative; //для скролла
+
+  height: 100vh;
+  min-height: 768px;
   padding-top: 150px;
 }
 
+.intro {
+  padding-top: 227px;
+  box-sizing: border-box;
+}
+
+.scroll {
+  position: absolute;
+  bottom: 0;
+  left: 0; right: 0;
+}
+
 .intro__button-container {
-  margin-bottom: 160px !important;
+  margin-bottom: 190px !important;
+}
+
+.contacts {
+  padding-bottom: 78px; //для футера
+}
+
+.page-footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
 }

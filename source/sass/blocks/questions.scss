@@ -1,7 +1,14 @@
+.questions {
+  background-image: url(../img/boy.png);
+  background-position: bottom right;
+  background-repeat: no-repeat;
+
+  height: 100vh;
+}
 .questions__header {
   display: inline-block;
 
-  margin: 0 0 58px 26px;
+  margin: 0 0 32px 26px;
   padding-right: 40px;
   padding-bottom: 6px;
   border-bottom: 3px solid $mint-color;
@@ -28,7 +35,7 @@
 
   margin: 0 0 5px;
   padding: 19px 90px 20px 39px;
-  background-color: $white-color;
+  background-color: rgba(255,255,255, 0.95);
   color: $dark-grey-color;
 
   &::before {
@@ -60,6 +67,42 @@
   border: none;
   background-color: $mint-color;
   border-radius: 0;
+}
+
+.accrodeon__button::after,
+.accrodeon__button::before {
+  content: "";
+  position: absolute;
+  width: 24px;
+  height: 2px;
+  background-color: #ffffff;
+  left: 22px;
+  top: 50%;
+  transform: translateY(-25%);
+
+}
+
+.accrodeon__button::after {
+  width: 2px;
+  height: 24px;
+  left: 33px;
+  transform: translateY(-50%);
+}
+
+.accrodeon__item-opened .accrodeon__button::after,
+.accrodeon__item-opened .accrodeon__button::before {
+  content: "";
+  position: absolute;
+  width: 24px;
+  height: 2px;
+  background-color: #ffffff;
+  transform: rotate(45deg) translateY(-25%);
+  left: 22px;
+  top: 50%;
+}
+
+.accrodeon__item-opened .accrodeon__button::after {
+  transform: rotate(-45deg) translateY(0%);
 }
 
 .accordeon__answer {
