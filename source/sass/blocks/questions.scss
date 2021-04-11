@@ -46,7 +46,16 @@
   color: $dark-grey-color;
 
   &::before {
+    content: "";
 
+    position: absolute;
+    top: 30px;
+    left: 18px;
+
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background-color: $mint-color-hover;
   }
 }
 

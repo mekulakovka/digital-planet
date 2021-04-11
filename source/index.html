@@ -68,7 +68,7 @@
       </nav>
 
       <div class="page-header__order">
-        <button class="button page-header__button" type="button">Заказать</button>
+        <a href="order-form.html" class="button page-header__button">Заказать</a>
         <p class="page-header__tel page-header__tel--mobile"><a class="page-header__link page-header__link-tel" href="tel:+880055535752">8 (800) 555 35 75</a></p>
       </div>
 
@@ -97,7 +97,7 @@
           <p class="intro__text">Образовательный виртуальный планетарий в Новороссийске. <br/ > Познавательное приключение в мир звёзд и галактик.</p>
 
           <div class="intro__button-container">
-            <button class="button intro__button intro__button-order" type="button">Заказать</button>
+            <a href="order-form.html" class="button intro__button intro__button-order">Заказать</a>
             <a class="button intro__button intro__button-video" href="#">Видео</a>
           </div>
         </div>
@@ -409,35 +409,6 @@
 
 </div>
 
-<div class="modal-overlay">
-
-  <div class="modal modal-order">
-    <div class="modal-order__send-form">
-      <h3 class="modal__header modal-order__header">Закажите VR планетарий</h3>
-      <p class="modal__text">Оставьте ваши контактные данные, мы обработаем заявку в течении двух рабочих дней и перезвоним вам.</p>
-
-      <form action="/" method="POST" class="order-form">
-        <div class="order-form__field form-field">
-          <label for="name" class="visually-hidden">Ваше имя</label>
-          <input id="name" type="text" name="name" placeholder="Ваше имя" required>
-        </div>
-
-        <div class="order-form__field form-field">
-          <label for="mail" class="visually-hidden">Ваш e-mail</label>
-          <input id="mail" type="email" name="mail" placeholder="Ваш e-mail" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
-        </div>
-        <button class="button order-form__button" type="submit">Отправить</button>
-      </form>
-    </div>
-
-    <div class="modal-order__thanks-form">
-      <h3 class="modal__header modal-order__header">Сообщение успешно отправлено!</h3>
-      <p class="modal__text">Мы обязательно свяжемся с вами в ближайшее время и подробно ответим на ваш вопрос, будьте на связи!</p>
-      <button class="button" type="submit">ОК</button>
-    </div>
-  </div>
-
-</div>
 
 </body>
 </html>
