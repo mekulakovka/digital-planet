@@ -29,7 +29,9 @@
 
 .about__slider {
   position: relative;
+
   margin-top: 100px;
+  padding-right: 30px;
 }
 
 .about__slider-header {
@@ -48,7 +50,13 @@
   z-index: 1;
 }
 
+.product-slider {
+  padding-top: 15px;
+  padding-right: 15px;
+}
+
 .product-slider__list {
+  position: relative;
 
   &::before {
     content:"";

@@ -33,6 +33,7 @@
 body {
   margin: 0;
   padding: 0;
+  min-width: $desktop-width;
 
   font-weight: 300;
   font-size: 17px;
@@ -53,7 +54,7 @@ body {
 (min-resolution: $retina-dpi),
 (min-resolution: $retina-dppx) {
   body {
-    background-image: url("../img/body-background@2x.jpg");;
+    background-image: url("../img/body-background@2x.jpg");
   }
 }
 
@@ -109,6 +110,12 @@ textarea {
   @include site-fullwidth();
 }
 
+@media (max-width: $tablet-width) {
+  .site-wrapper {
+    @include site-tabletwidth();
+  }
+}
+
 .intro {
   //flex-shrink: 0;
   //min-height: 100%;
@@ -139,9 +146,15 @@ body {
   width: 100%;
   height: 74px;
 
+  min-width:$desktop-width;
+
   //background: linear-gradient(#000, #000, transparent);
 
   z-index: 999;
+}
+
+.page-header__wrapper {
+  padding: 0 15px;
 }
 
 .intro,

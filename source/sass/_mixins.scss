@@ -4,12 +4,6 @@
   list-style: none;
 }
 
-@mixin reset-button-style() {
-  border: none;
-  background-color: transparent;
-  cursor: pointer;
-}
-
 @mixin no-outline() {
   outline: none;
   background: transparent;
@@ -20,14 +14,15 @@
 }
 
 @mixin site-fullwidth() {
-  width: 100%;
-  max-width:1278px;
-  min-width: 1000px;//временно, потом заменить на медиазапросы
+  min-width:$desktop-width;
+
   margin: 0 auto;
   padding: 0 15px;
   box-sizing: border-box;
 }
 
-@mixin hover-transition() {
-  transition: background-color 0.3s ease;
+@mixin site-tabletwidth() {
+  min-width:$mobile-width;
+
+  padding: 0 10%;
 }

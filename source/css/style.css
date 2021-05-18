@@ -29,6 +29,7 @@
 body {
   margin: 0;
   padding: 0;
+  min-width: 1281px;
   font-weight: 300;
   font-size: 17px;
   line-height: 1.5;
@@ -84,13 +85,16 @@ textarea {
   opacity: 0.8; }
 
 .site-wrapper {
-  width: 100%;
-  max-width: 1278px;
-  min-width: 1000px;
+  min-width: 1281px;
   margin: 0 auto;
   padding: 0 15px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box; }
+
+@media (max-width: 1280px) {
+  .site-wrapper {
+    min-width: 728px;
+    padding: 0 10%; } }
 
 .intro {
   background-image: url("../img/kid_VR@1x.png"), url("../img/body-background-main@1x.jpg");
@@ -110,7 +114,11 @@ body {
   top: 0;
   width: 100%;
   height: 74px;
+  min-width: 1281px;
   z-index: 999; }
+
+.page-header__wrapper {
+  padding: 0 15px; }
 
 .intro,
 .about,
@@ -257,7 +265,7 @@ body {
   pointer-events: none; }
 
 .page-header {
-  padding-top: 43px;
+  padding-top: 40px;
   margin-bottom: 153px; }
 
 .page-header__wrapper {
@@ -486,7 +494,8 @@ body {
 
 .about__slider {
   position: relative;
-  margin-top: 100px; }
+  margin-top: 100px;
+  padding-right: 30px; }
 
 .about__slider-header {
   position: absolute;
@@ -500,16 +509,22 @@ body {
   text-align: right;
   z-index: 1; }
 
-.product-slider__list::before {
-  content: "";
-  position: absolute;
-  top: -15px;
-  right: -15px;
-  width: 564px;
-  height: 280px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  border: 4px solid #15b38d; }
+.product-slider {
+  padding-top: 15px;
+  padding-right: 15px; }
+
+.product-slider__list {
+  position: relative; }
+  .product-slider__list::before {
+    content: "";
+    position: absolute;
+    top: -15px;
+    right: -15px;
+    width: 564px;
+    height: 280px;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    border: 4px solid #15b38d; }
 
 .product-slider__item {
   position: relative;
@@ -955,7 +970,7 @@ body {
 
 .scroll__social {
   position: absolute;
-  left: 0;
+  left: 15px;
   top: 3px;
   margin: 0;
   padding: 0;
