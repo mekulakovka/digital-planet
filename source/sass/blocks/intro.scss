@@ -1,3 +1,26 @@
+.intro {
+  height: 100vh;
+
+  box-sizing: border-box;
+
+  background-image: url("../img/kid_VR@1x.png"), url("../img/body-background-main@1x.jpg");
+  background-repeat: no-repeat, no-repeat;
+  background-size: 430px 350px, cover;
+  background-position: bottom right, top center; //временно у пацана отступ сверху, пока не порешаем с экраном
+
+  .fullscreen-wrapper {
+    padding-top: 227px;
+  }
+}
+
+@media (-webkit-min-device-pixel-ratio: 1.5),
+(min-resolution: $retina-dpi),
+(min-resolution: $retina-dppx) {
+  .intro {
+    background-image: url("../img/kid_VR@2x.png"), url("../img/body-background-main@2x.jpg");
+  }
+}
+
 .intro__container {
   padding-left: 71px;
 }
@@ -16,6 +39,8 @@
 }
 
 .intro__button-container {
+  //margin-bottom: 190px;
+
   margin-bottom: 40px;
 }
 
@@ -28,11 +53,13 @@
 
 .intro__button-order {
   position: relative;
+
   min-width: 238px;
   width: auto;
   margin-right: 20px;
   background-color: $mint-color;
-  border-color: $mint-color;
+  border: none;
+
   transition: border-color 0.3s ease-in-out, background-color 0.3s ease-in-out;
 }
 
@@ -70,4 +97,58 @@
 
 @media (max-width: $tablet-width) {
 
+  .intro {
+    background-image: url("../img/body-background-main@1x.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
+  }
+
+  @media (-webkit-min-device-pixel-ratio: 1.5),
+  (min-resolution: $retina-dpi),
+  (min-resolution: $retina-dppx) {
+    .intro {
+      background-image: url("../img/body-background-main@2x.jpg");
+    }
+  }
+
+  .intro__container {
+    padding-left: 0;
+  }
+
+  .intro__title {
+    margin-bottom: 45px;
+
+    font-size: 66px;
+    text-align: center;
+  }
+
+  .intro__text {
+    width: 550px;
+    margin: 0 auto 100px;
+
+    text-align: center;
+  }
+
+  .intro__button-container {
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .intro__button {
+    width: 240px;
+
+    margin-right: 20px;
+    margin-left: 20px;
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .intro__button-container {
+    display: flex;
+    flex-direction:column;
+    align-items:flex-start;
+  }
 }

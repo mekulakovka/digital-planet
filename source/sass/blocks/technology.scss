@@ -13,7 +13,7 @@
 
 .technology-slider {
   position: relative;
-  min-width:1200px; //чтоб не съезжали блоки слайдера
+  width:1200px;
 }
 
 .technology-slider__picture-container {
@@ -178,3 +178,72 @@
 .technology-slider__controls {
   display: none;
 }
+
+
+@media (max-width: $tablet-width) {
+  .technology__header {
+    margin-left: 0;
+    margin-bottom: 40px;
+
+    font-size: 32px;
+  }
+
+  .technology-slider {
+    width: 444px;
+    margin: 0 auto;
+    padding-left: 0;
+  }
+
+  .technology-slider__list {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .technology-slider__item {
+    display: none;
+    flex-direction:column;
+
+    width: 100%;
+    margin: 0 0 20px 0;
+
+    &::after {
+      display: none;
+    }
+
+    &--1 {
+      padding-right: 0;
+    }
+  }
+
+  .technology-slider__picture-container {
+    position: relative;
+    top: 0;
+    left: 0;
+
+    width: auto;
+    height: auto;
+
+    margin-bottom: 30px;
+    padding: 0;
+    background:none;
+  }
+
+  .technology-slider__image {
+    top: 111px;
+    left: 17px;
+  }
+
+  .technology-slider__button-enlarge {
+    display: none;
+  }
+
+  .technology-slider__item.slider__item-current {
+    display: flex;
+  }
+
+  .technology-slider .slider__controls {
+    display: flex;
+  }
+}
+
+

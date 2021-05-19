@@ -97,3 +97,11 @@
   cursor: auto;
   pointer-events: none;
 }
+
+@media (max-width: $tablet-width) {
+
+  .slider__controls {
+    flex-direction: row;
+    justify-content: flex-end;
+  }
+}

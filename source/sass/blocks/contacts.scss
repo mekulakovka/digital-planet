@@ -1,3 +1,7 @@
+.contacts .fullscreen-wrapper {
+  padding-bottom: 78px; //для футера
+}
+
 .contacts__header {
   display: inline-block;
 
@@ -74,4 +78,41 @@
   }
 }
 
+@media (max-width: $tablet-width) {
+  .contacts .fullscreen-wrapper {
+    padding-bottom: 50px; //для футера
+  }
+
+  .contacts__header {
+    margin-left: 0;
+    margin-bottom: 40px;
+
+    font-size: 32px;
+  }
+
+  .contacts__container {
+    padding-left: 0;
+  }
+
+  .contacts__list {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    margin-right: 25px;
+  }
+
+  .contacts__item {
+    margin-bottom: 0;
+  }
+
+
+  .feedback-form {
+    width: 420px;
+  }
+
+  .feedback-form__button {
+    margin-bottom: 10px;
+  }
+}
 

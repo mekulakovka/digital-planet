@@ -40,3 +40,26 @@
     display: none;
   }
 }
+
+@media (max-width: $tablet-width) {
+
+  .site-nav {
+    width: 70%;
+    max-width:620px;
+  }
+
+  .site-nav__link {
+    font-size: 14px;
+
+    &::before {
+      display: none;
+    }
+  }
+}
+
+
+@media (max-width: $mobile-width) {
+  .site-nav {
+    display: none;
+  }
+}

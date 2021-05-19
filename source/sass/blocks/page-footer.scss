@@ -1,5 +1,8 @@
 .page-footer {
-  //margin-top: 30px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+
   padding-bottom: 30px;
 }
 
@@ -8,7 +11,10 @@
   justify-content: space-between;
   align-content: center;
 
+  max-width: 1280px;
   height: 24px;
+  margin: 0 auto;
+  padding: 0 15px;
 }
 
 .page-footer__text {
@@ -41,5 +47,16 @@
   &:hover {
     opacity: 1;
   }
-
 }
+
+
+@media (max-width: $tablet-width) {
+  .page-footer {
+    padding-bottom: 15px;
+  }
+
+  .page-footer__text {
+    font-size: 13px;
+  }
+}
+

@@ -1,4 +1,8 @@
 .scroll {
+  position: absolute;
+  bottom: 0;
+  left: 0; right: 0;
+
   padding-bottom: 30px;
 }
 
@@ -83,3 +87,10 @@
 .scroll__link-arrow::after {
   bottom: 12px;
 }
+
+@media (max-width: $tablet-width) {
+  .scroll {
+    display: none;
+  }
+}
+

@@ -1,7 +1,5 @@
 $font-family: "Ubuntu", "Arial", sans-serif;
 
-$site-width: 1278px;
-
 $black-color: #0D1117;
 $white-color: #ffffff;
 $mint-color: #15b38d;
@@ -10,11 +8,11 @@ $grey-color: #B0ACAC;
 $dark-grey-color: #1c1c1c;
 $light-color: #f3f3f3;
 
+//$site-width: 1278px;
 
-
-$mobile-width: 728px;
-$tablet-width: 1280px;
-$desktop-width: 1281px;
+$tablet-width: 1279px;
+$mobile-width: 767px;
+$site-min-width: 320px;
 
 $retina-dpi: 144dpi;
 $retina-dppx: 1.5dppx;

@@ -134,3 +134,16 @@
 
   }
 }
+
+@media (max-width: $tablet-width) {
+  .modal-order {
+    margin-top: 0;
+    top: 15%;
+  }
+
+  .page-footer__text {
+    font-size: 13px;
+  }
+}
+
+

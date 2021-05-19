@@ -166,3 +166,56 @@
 .worksteps-slider .slider__controls {
   display: none;
 }
+
+
+@media (max-width: $tablet-width) {
+  .howitworks__header {
+    margin-left: 0;
+    margin-bottom: 40px;
+
+    font-size: 32px;
+  }
+  .worksteps-slider {
+    //width: 300px;
+    //margin: 0 auto;
+    padding-left: 0;
+    padding-top: 15px;
+
+  }
+
+  .worksteps-slider__list {
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .worksteps-slider__item {
+    flex-direction: column;
+    justify-content: flex-start;
+
+    width: 45%;
+    margin: 0 0 55px 0;
+
+    &::before {
+      display: none;
+    }
+
+    &::after {
+      left: 22px;
+    }
+  }
+
+  .worksteps-slider__picture {
+    margin-left: 30px;
+    margin-bottom: 30px;
+  }
+
+  .worksteps-slider__item.slider__item {
+    //display: flex;
+  }
+
+  .worksteps-slider .slider__controls {
+    //display: flex;
+  }
+
+}
