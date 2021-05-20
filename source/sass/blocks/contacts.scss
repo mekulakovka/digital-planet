@@ -51,6 +51,15 @@
   font-weight: 300;
 }
 
+.contacts__item-link {
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+    color: #ffffff;
+  }
+}
+
 .feedback-form {
   display: flex;
   flex-wrap: wrap;
@@ -74,15 +83,13 @@
   textarea {
     width: 100%;
     height: 144px;
+
     box-sizing: border-box;
+    resize: none;
   }
 }
 
 @media (max-width: $tablet-width) {
-  .contacts .fullscreen-wrapper {
-    padding-bottom: 50px; //для футера
-  }
-
   .contacts__header {
     margin-left: 0;
     margin-bottom: 40px;
@@ -114,5 +121,63 @@
   .feedback-form__button {
     margin-bottom: 10px;
   }
+}
+
+@media (max-width: $mobile-width) {
+  .contacts .fullscreen-wrapper {
+    padding-bottom: 128px; //для футера
+  }
+
+  .contacts__header {
+    display: block;
+
+    margin-bottom: 30px;
+    padding-right: 0;
+
+    font-size: 28px;
+    line-height: 32px;
+  }
+
+  .contacts__container {
+    flex-direction: column;
+    padding-bottom: 80px;
+  }
+
+  .contacts__list {
+    width: 100%;
+
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+
+  .contacts__item {
+    margin-bottom: 30px;
+  }
+
+  .contacts__item-title {
+    margin-bottom: 13px;
+  }
+
+  .contacts__item-text {
+    margin-bottom: 5px;
+  }
+
+  .contacts__form-title {
+    margin-bottom: 10px;
+  }
+
+  .feedback-form {
+    width: 100%;
+    max-width: 420px;
+  }
+
+  .feedback-form__field {
+    width: 100%;
+  }
+
+  .feedback-form__button {
+    margin-bottom: 0;
+  }
+
 }
 

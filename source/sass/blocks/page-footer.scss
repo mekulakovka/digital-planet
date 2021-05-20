@@ -51,12 +51,27 @@
 
 
 @media (max-width: $tablet-width) {
-  .page-footer {
-    padding-bottom: 15px;
+  .page-footer__text {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .page-footer__wrapper {
+    flex-direction: column;
+    height: auto;
+
+    padding: 0 4%;
   }
 
   .page-footer__text {
-    font-size: 13px;
+    margin-bottom: 5px;
+  }
+
+  .page-footer__social {
+    justify-content: flex-start;
+
+    margin-top: 15px;
   }
 }
 

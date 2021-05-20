@@ -60,10 +60,6 @@
   }
 }
 
-.accordeon__question {
-
-}
-
 .accordeon__question p {
   margin: 0;
 
@@ -86,40 +82,45 @@
   border-radius: 0;
 }
 
-.accrodeon__button::after,
 .accrodeon__button::before {
   content: "";
+
   position: absolute;
-  width: 24px;
-  height: 2px;
-  background-color: #ffffff;
   left: 22px;
   top: 50%;
+
+  width: 24px;
+  height: 2px;
+
+  background-color: #ffffff;
+
   transform: translateY(-25%);
 
 }
 
 .accrodeon__button::after {
+  content: "";
+
+  position: absolute;
+  left: 33px;
+  top: 50%;
+
   width: 2px;
   height: 24px;
-  left: 33px;
+
+  background-color: #ffffff;
+
   transform: translateY(-50%);
 }
 
-.accrodeon__item-opened .accrodeon__button::after,
 .accrodeon__item-opened .accrodeon__button::before {
-  content: "";
-  position: absolute;
-  width: 24px;
-  height: 2px;
-  background-color: #ffffff;
   transform: rotate(45deg) translateY(-25%);
-  left: 22px;
-  top: 50%;
+  //left: 22px;
 }
 
 .accrodeon__item-opened .accrodeon__button::after {
-  transform: rotate(-45deg) translateY(0%);
+  left: 22px;
+  transform: rotate(45deg) translateY(-65%);
 }
 
 .accordeon__answer {
@@ -149,5 +150,67 @@
 
   .accrodeon__list {
     width: 100%;
+  }
+}
+
+
+@media (max-width: $mobile-width) {
+  .questions__header {
+    display: block;
+
+    margin-bottom: 28px;
+    padding-right: 0;
+
+    font-size: 28px;
+    line-height: 32px;
+  }
+
+  .questions__accordeon {
+    margin: 0 -7px;
+  }
+
+  .accrodeon__item {
+    padding: 10px 32px 10px 8px;
+
+    &::before {
+      display: none;
+    }
+  }
+
+  .accordeon__question p {
+    font-size: 17px;
+    line-height: 21px;
+  }
+
+  .accrodeon__button {
+    width: 32px;
+    height: 100%;
+
+    padding: 0;
+  }
+
+  .accrodeon__button::before {
+    left: 9px;
+    width: 16px;
+  }
+
+  .accrodeon__button::after {
+    left: 16px;
+
+    width: 2px;
+    height: 16px;
+  }
+
+  .accrodeon__item-opened .accrodeon__button {
+    max-height: 88px;
+  }
+
+  .accrodeon__item-opened .accrodeon__button::before {
+    transform: rotate(45deg) translateY(-25%);
+  }
+
+  .accrodeon__item-opened .accrodeon__button::after {
+    left: 9px;
+    transform: rotate(45deg) translateY(-65%);
   }
 }
